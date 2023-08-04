@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Inter&family=Karla:wght@600&family=Roboto:wght@300;900&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+
+    background-color: #1C1C1C;
+    color: white;
+
+    font-family: 'Inter';
+}
+
+h2{
+    font-family: 'Karla','Courier New', Courier, monospace;
+    font-size: 40px;
+    margin: 0px 0px 10px 0px;
+}
+
+p{
+  margin: 0px;  
+  color: #D5D4D8;
+}
+
+hr{
+    height: 1px;
+    background-color: #2F3E53;
+    border: none;
+    margin:  35px 0px;
+}
+
+.generate-btn:hover{
+    box-shadow: 2px 2px 2px;
+    cursor: pointer;
+}
+
+
+.generate-btn{
+    margin-top: 35px;
+    padding: 9px 17px 9px 15px;
+    border-radius: 6px;
+    background: #0c845c;
+    border:none;
+    color: white
+}
+
+
+.password-btn:hover, .password-btn:active{
+    cursor: pointer;
+    box-shadow: 1px 1px 1px;
+}
+
+.password-btn{
+    padding: 4px 16px;
+    color: #55F991;
+    background-color:#273549;
+    border-radius: 6px;
+    border:none;
+    margin: 8px 0px;
+    min-height: 40px;
+    min-width: 200px;
+}
+
+.configure{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 18px 0px;
+}
+
+#line-highlight{
+    color: #4ADF86;
+}
+
+#hero{
+    max-width: 720px;
+    margin: 4% auto;
+    background-color: #1F2937;
+}
+
+#card{
+    padding: 100px 52px;
+    margin: 0;
+}
+
+#password-generated{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#copied-msg{
+    margin-top: 20px;
+    height: 20;
+    color: #34D399;;
+}

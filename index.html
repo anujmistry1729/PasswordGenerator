@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <section id="hero">
+
+        <section id="card">
+            <article id="generator-info">
+                <h2>Generate a <span id="line-highlight">random password</span></h2>
+                <p>Never use an insecure password again.</p>
+                <button class="generate-btn" onclick="getPassword()">Generate passwords</button>
+
+                <!-- <article class="configure">
+                    <article>
+                        <label for="isNumbers">Numbers</label>
+                        <input type="checkbox" name="isNumbers" id="is-numbers" checked>
+                    </article>
+
+                    <article>
+                        <label for="isSpecialChar">Special Characters</label>
+                        <input type="checkbox" name="isSpecialChar" id="is-special-char" checked>
+                    </article>
+                </article> -->
+                <hr>
+            </article>
+
+            <article id="password-generated">
+                <button class="password-btn" id="gen-pass-1" onclick="copyText('gen-pass-1')"></button>
+                <button class="password-btn" id="gen-pass-2" onclick="copyText('gen-pass-2')"></button>
+
+            </article>
+
+            <article>
+                <p id="copied-msg"></p>
+            </article>
+        </section>
+
+    </section>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
