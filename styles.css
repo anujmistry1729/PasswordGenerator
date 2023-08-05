@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Inter&family=Karla:wght@600&family=Roboto:wght@300;900&display=swap');
 
 body{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
     text-align: center;
 
     background-color: #1C1C1C;
@@ -37,7 +34,7 @@ hr{
 
 
 .generate-btn{
-    margin-top: 35px;
+    margin-top: 20px;
     padding: 9px 17px 9px 15px;
     border-radius: 6px;
     background: #0c845c;
@@ -46,7 +43,7 @@ hr{
 }
 
 
-.password-btn:hover, .password-btn:active{
+/* .password-btn:hover, .password-btn:active{
     cursor: pointer;
     box-shadow: 1px 1px 1px;
 }
@@ -60,7 +57,7 @@ hr{
     margin: 8px 0px;
     min-height: 40px;
     min-width: 200px;
-}
+} */
 
 .configure{
     display: flex;
@@ -68,6 +65,25 @@ hr{
     align-items: center;
     margin: 18px 0px;
 }
+
+.password-length{
+    display: flex;
+    margin-top: 26px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#length-input{
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 40px;
+    background-color: #D1D5DB;
+    color: #6B7280;
+    margin-left: 12px;
+}
+
 
 #line-highlight{
     color: #4ADF86;
@@ -84,14 +100,37 @@ hr{
     margin: 0;
 }
 
-#password-generated{
+/* #password-generated{
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
+} */
 
 #copied-msg{
     margin-top: 20px;
     height: 20;
     color: #34D399;;
+}
+
+#generator-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#password-generated{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.password-btn{
+    box-sizing: border-box;
+    padding: 8px 16px;
+    color: #55F991;
+    background-color:#273549;
+    border-radius: 6px;
+    border:none;
+    margin: 8px 0px;
 }

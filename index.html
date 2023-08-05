@@ -17,26 +17,19 @@
             <article id="generator-info">
                 <h2>Generate a <span id="line-highlight">random password</span></h2>
                 <p>Never use an insecure password again.</p>
+
+                <article class="password-length">
+                    <label for="length-input">Length: </label>
+                    <input type="number" name="length-input" id="length-input" min="1" max="60" value="15" required>
+                </article>
+
                 <button class="generate-btn" onclick="getPassword()">Generate passwords</button>
-
-                <!-- <article class="configure">
-                    <article>
-                        <label for="isNumbers">Numbers</label>
-                        <input type="checkbox" name="isNumbers" id="is-numbers" checked>
-                    </article>
-
-                    <article>
-                        <label for="isSpecialChar">Special Characters</label>
-                        <input type="checkbox" name="isSpecialChar" id="is-special-char" checked>
-                    </article>
-                </article> -->
                 <hr>
             </article>
 
             <article id="password-generated">
-                <button class="password-btn" id="gen-pass-1" onclick="copyText('gen-pass-1')"></button>
-                <button class="password-btn" id="gen-pass-2" onclick="copyText('gen-pass-2')"></button>
-
+                <p class="password-btn" id="gen-pass-1"></p>
+                <p class="password-btn" id="gen-pass-2"></p>
             </article>
 
             <article>

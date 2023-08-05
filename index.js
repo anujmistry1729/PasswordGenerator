@@ -1,46 +1,43 @@
 const characters = [  "A",  "B",  "C",  "D",  "E",  "F",  "G",  "H",  "I",  "J",  "K",  "L",  "M",  "N",  "O",  "P",  "Q",  "R",  "S",  "T",  "U",  "V",  "W",  "X",  "Y",  "Z",  "a",  "b",  "c",  "d",  "e",  "f",  "g",  "h",  "i",  "j",  "k",  "l",  "m",  "n",  "o",  "p",  "q",  "r",  "s",  "t",  "u",  "v",  "w",  "x",  "y",  "z",  "0",  "1",  "2",  "3",  "4",  "5",  "6",  "7",  "8",  "9",  "~",  "`",  "!",  "@",  "#",  "$",  "%",  "^",  "&",  "*",  "(",  ")",  "_",  "-",  "+",  "=",  "{",  "[",  "}",  "]",  ",",  "|",  ":",  ";",  "<",  ">",  ".",  "?",  "/"];
 
-let genPass1El = document.getElementById("gen-pass-1");
-let genPass2El = document.getElementById("gen-pass-2");
-let copiedEl = document.getElementById("copied-msg");
-
+const genPass1El = document.getElementById("gen-pass-1");
+const genPass2El = document.getElementById("gen-pass-2");
+const copiedEl = document.getElementById("copied-msg");
+const passwordLengthEl = document.getElementById("length-input");
 
 if (genPass1El.textContent === "" && genPass2El.textContent === "") {
   styleEmptyStateButtons();
 }
 
-async function copyText(idName) {
-  copiedEl.textContent = "";
 
-  if (idName === "gen-pass-1") {
-    try {
-      const copy1 = await navigator.clipboard.writeText(genPass1El.textContent);
-      copiedEl.textContent = "Copied to Clipboard!";
-    } catch (error) {
-      console.log(error);
-    }
-  } else {
-    try {
-      const copy2 = await navigator.clipboard.writeText(genPass2El.textContent);
-      copiedEl.textContent = "Copied to Clipboard!";
-    } catch (error) {
-      console.log(error);
-    }
+genPass1El.addEventListener("click",  async function(){
+  if(this.textContent){
+     await navigator.clipboard.writeText(genPass1El.textContent);
+    copiedEl.textContent = "Copied to Clipboard!";
   }
-}
+})
+
+genPass2El.addEventListener("click", async function(){
+  if(this.textContent){
+     await navigator.clipboard.writeText(genPass1El.textContent);
+    copiedEl.textContent = "Copied to Clipboard!";
+  }
+})
+
 
 async function getPassword() {
   copiedEl.textContent = "";
-
-  genPass1El.textContent = generatePassword();
-  genPass2El.textContent = generatePassword();
+  if(passwordLengthEl.value >= 1 && passwordLengthEl.value <=60){
+    genPass1El.textContent = generatePassword(passwordLengthEl.value);
+    genPass2El.textContent = generatePassword(passwordLengthEl.value);
+  }
 }
 
 function randomIndex() {
   return Math.floor(Math.random() * characters.length) + 1;
 }
 
-function generatePassword(length = 15) {
+function generatePassword(length) {
   let randomPassword = "";
 
   for (let i = 0; i < length; i++) {
