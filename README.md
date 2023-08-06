@@ -6,6 +6,6 @@ Built using HTML, CSS and JS.
 
 ### Future Scope
 
-- [ ] Custom Length Input (max 255)
+- [X] Custom Length Input (max 60)
 - [ ] Option for Only Alphabets, Numbers + Aplhabets and Number + Alphabets + Special Characters
 - [ ] Dark mode toggle switch
